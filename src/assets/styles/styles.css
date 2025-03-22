@@ -1,4 +1,6 @@
 .mainpage {
+  position: relative;
+
   /* PROGRESSBAR */
   .progressbar {
     width: 0%;
@@ -6,13 +8,145 @@
     position: fixed;
     left: 0;
     top: 0;
-    background: var(--main-cl);
+    background: var(--primary-cl);
     z-index: 400;
   }
+
   /* ----------------- HEADER ----------------- */
+  .header {
+    height: var(--height-header);
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    width: 100%;
 
-  /* ----------------- MAIN ----------------- */
-  /* Section */
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
 
-  /* ----------------- FOOTER ----------------- */
+      position: relative;
+    }
+
+    .header__menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+
+      li {
+        a {
+          font-family: var(--font-body-medium);
+          color: var(--gray-light-cl);
+          text-transform: capitalize;
+          transition: all var(--duration) ease-in-out;
+          text-wrap: nowrap;
+
+          --padding-lr: 16px;
+          padding: 8px var(--padding-lr);
+          position: relative;
+
+          &::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-cl);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+            transition: all var(--duration) ease-in-out;
+          }
+
+          &.--active,
+          &:hover {
+            color: var(--gray-dark-cl);
+            &::after {
+              width: calc(100% - calc(var(--padding-lr) * 2));
+            }
+          }
+        }
+      }
+    }
+
+    .header__cta {
+      display: flex;
+      align-items: center;
+
+      .header__cta-hamburger {
+        width: 28px;
+        height: 20px;
+        position: relative;
+        cursor: pointer;
+        margin-left: 20px;
+        display: none;
+
+        &::before {
+          content: '';
+          width: 100%;
+          height: 2px;
+          background-color: var(--black-cl);
+          display: block;
+          position: absolute;
+          transition: all var(--duration) ease-in-out;
+        }
+        span {
+          content: '';
+          width: 100%;
+          height: 2px;
+          background-color: var(--black-cl);
+          display: block;
+          position: absolute;
+          transition: all var(--duration) ease-in-out;
+        }
+        &::after {
+          content: '';
+          width: 100%;
+          height: 2px;
+          background-color: var(--black-cl);
+          display: block;
+          position: absolute;
+          transition: all var(--duration) ease-in-out;
+        }
+        &::before {
+          transform: rotate(0deg) translate(0px, 0px);
+        }
+        span {
+          top: 50%;
+          transform: translateY(-50%);
+          transition: all var(--duration) ease-in-out;
+        }
+        &::after {
+          bottom: 0;
+          transform: rotate(0deg) translate(0px, 0px);
+        }
+
+        &.--active {
+          &::before {
+            transform: rotate(45deg) translate(9px, 4px);
+            transition: all var(--duration) ease-in-out;
+          }
+          span {
+            opacity: 0;
+          }
+          &::after {
+            transform: rotate(-45deg) translate(9px, -4px);
+            transition: all var(--duration) ease-in-out;
+          }
+        }
+      }
+    }
+
+    /* ----------------- MAIN ----------------- */
+    /* Section */
+
+    /* ----------------- FOOTER ----------------- */
+  }
 }

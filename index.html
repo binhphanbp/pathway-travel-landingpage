@@ -4,19 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pathway - LandingPage</title>
+    <!-- Favicon -->
+    <link rel="icon" href="./public/icons/favicon.ico" type="image/x-icon" />
 
     <link rel="stylesheet" href="./src/assets/styles/base.css" />
     <link rel="stylesheet" href="./src/assets/styles/grid.css" />
     <link rel="stylesheet" href="./src/assets/styles/styles.css" />
   </head>
-  <body>
+  <body class="mainpage">
+    <!-- PROGRESSBAR -->
+    <div class="progressbar"></div>
+
     <!-- HEADER -->
-    <header class="header"></header>
+    <header class="header">
+      <div class="container">
+        <!-- Header Logo -->
+        <a href="#" class="header__logo">
+          <img
+            src="./public/icons/logo-type-pathway.svg"
+            alt="logo-type-pathway"
+          />
+        </a>
+
+        <!-- Header Menu -->
+        <ul class="header__menu">
+          <li><a href="#home" class="--active">home</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#customers">customers</a></li>
+          <li><a href="#destinations">destinations</a></li>
+          <li><a href="#blog">blog</a></li>
+        </ul>
+
+        <!-- Header CTA -->
+        <div class="header__cta">
+          <a href="#contact" class="btn btn-secondary">Contact us</a>
+
+          <!-- Menu Mobile Button -->
+          <div class="header__cta-hamburger">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
 
     <!-- MAIN -->
-    <main class="mainpage"></main>
+    <main class="main"></main>
 
     <!-- FOOTER -->
     <footer class="footer"></footer>
+
+    <script src="./src/assets/scripts/main.js"></script>
   </body>
 </html>
