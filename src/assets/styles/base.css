@@ -1,0 +1,219 @@
+/* ---------------- RESET CSS ---------------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font: inherit;
+}
+ol,
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  outline: 0;
+}
+strong {
+  font-family: sdb;
+}
+img {
+  max-width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: block;
+  outline: 0;
+  object-fit: contain;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+/* ---------------- FONTS SETTINGS ---------------- */
+@font-face {
+  font-family: 'ppr';
+  src: url('../fonts/Poppins-Regular.woff2') format('woff2'),
+    url('../fonts/Poppins-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ppm';
+  src: url('../fonts/Poppins-Medium.woff2') format('woff2'),
+    url('../fonts/Poppins-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ppsb';
+  src: url('../fonts/Poppins-SemiBold.woff2') format('woff2'),
+    url('../fonts/Poppins-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ppb';
+  src: url('../fonts/Poppins-Bold.woff2') format('woff2'),
+    url('../fonts/Poppins-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------------- VARIABLES ---------------- */
+:root {
+  --primary-cl: #001f3b;
+  --secondary-cl: #f27052;
+  --tertiary-cl: #03738c;
+
+  --white-page-cl: #f6f6f6;
+  --white-cl: #ffffff;
+  --black-cl: #0e0e0e;
+  --gray-cl: #707070;
+  --yellow-cl: #ffc515;
+
+  /* Fonts: */
+  --font-body: ppr;
+  --font-body-medium: ppm;
+  --font-body-semibold: ppsb;
+  --font-body-bold: ppb;
+
+  /* Font-size, Line-height, Letter-spacing Variables: */
+  --fs-h1: 8rem;
+  --lh-h1: 6.4rem;
+  --ls-h1: 5.8px;
+
+  --fs-h2: 4.6rem;
+  --lh-h2: 4.8rem;
+  --ls-h2: 0.1px;
+
+  --fs-h3: 1.8rem;
+  --lh-h3: 2.5rem;
+  --ls-h3: 0.1px;
+
+  --fs-text-button: 1.8rem;
+  --lh-text-button: 2.5rem;
+  --ls-text-button: 0.1px;
+
+  --fs-body: 1.6rem;
+  --lh-body: 2.4rem;
+  --ls-body: 0.05px;
+
+  --duration: 0.4s;
+
+  --height-header: 60px;
+  --height-footer: 50px;
+  --height-progress-bar: 5px;
+  --height-button: 48px;
+  --height-button-large: 64px;
+  --pd-section: 60px;
+}
+/* Heading */
+.heading {
+  font-family: var(--font-body-bold);
+  color: var(--black-cl);
+}
+.heading.--h1 {
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+  letter-spacing: var(--ls-h1);
+  color: var(--primary-cl);
+}
+.heading.--h2 {
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+  letter-spacing: var(--ls-h2);
+}
+.heading.--h3 {
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+  letter-spacing: var(--ls-h3);
+}
+.heading.--primary-cl {
+  color: var(--primary-cl);
+}
+.heading.--gray-light-cl {
+  color: var(--gray-light-cl);
+}
+
+/* ---------------- LAYOUTS ---------------- */
+body {
+  width: 100%;
+  margin: auto;
+
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  letter-spacing: var(--ls-body);
+
+  background-color: var(--white-page-cl);
+  color: var(--primary-cl);
+}
+
+.main {
+  position: relative;
+  /* margin-top: var(--height-header); */
+}
+
+section.--ptb {
+  padding: var(--pd-section) 0;
+}
+section.--pt {
+  padding-top: var(--pd-section);
+}
+section.--pb {
+  padding-bottom: var(--pd-section);
+}
+
+/* ---------------- COMPONENTS ---------------- */
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--height-button);
+  padding: 0 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: var(--duration);
+  cursor: pointer;
+
+  font-family: var(--font-body-semibold);
+  font-size: var(--fs-text-button);
+  line-height: var(--lh-text-button);
+  letter-spacing: var(--ls-text-button);
+}
+
+.btn-primary {
+  background-color: var(--secondary-cl);
+  color: var(--white-cl);
+}
+.btn-primary:hover {
+  background-color: var(--primary-cl);
+}
+
+.thumb {
+  width: 100%;
+  aspect-ratio: 282/411;
+  overflow: hidden;
+  display: block;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

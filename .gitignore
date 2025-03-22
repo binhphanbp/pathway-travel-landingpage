@@ -1,0 +1,11 @@
+node_modules/
+.history
+.qodo
+
+*.log
+*.env
+*.bak
+*.swp
+dist/
+build/
+.vscode/

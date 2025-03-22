@@ -1,0 +1,18 @@
+.mainpage {
+  /* PROGRESSBAR */
+  .progressbar {
+    width: 0%;
+    height: 4px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: var(--main-cl);
+    z-index: 400;
+  }
+  /* ----------------- HEADER ----------------- */
+
+  /* ----------------- MAIN ----------------- */
+  /* Section */
+
+  /* ----------------- FOOTER ----------------- */
+}
