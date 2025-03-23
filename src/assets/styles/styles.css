@@ -364,10 +364,17 @@
       }
 
       .row {
+        --spacer: 16px;
         margin-top: 20px;
 
         .col {
           margin-top: 20px;
+        }
+
+        .besttour__list-item {
+          .textbox {
+            padding: 10px 16px;
+          }
         }
       }
     }
