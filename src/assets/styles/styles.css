@@ -17,6 +17,7 @@
 
   /* ----------------- HEADER ----------------- */
   .header {
+    background-color: var(--white-cl);
     height: var(--height-header);
     position: fixed;
     top: 0;
@@ -252,6 +253,9 @@
     }
 
     @media screen and (max-width: 768px) {
+      /* max-height: 800px;
+      min-height: 567px; */
+
       .container {
         .row {
           .textbox {
@@ -276,6 +280,99 @@
             }
           }
         }
+      }
+    }
+  }
+
+  /* Section Choose Us */
+  .choose {
+    .container {
+      .row {
+        .choose__img {
+          margin-left: 50px;
+
+          img {
+            border-radius: 64px;
+          }
+        }
+        .choose__content {
+          .choose__content-reason {
+            margin-top: 40px;
+
+            .reason__item {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 30px;
+
+              margin-top: 15px;
+              border-radius: 10px;
+              padding: 10px;
+
+              transition: var(--duration);
+              &:hover {
+                background-color: var(--white-cl);
+                box-shadow: -2px 0px 9px 0px rgba(176, 176, 176, 0.75);
+                transform: translate(-5px, -5px);
+              }
+
+              .textbox {
+                .desc {
+                  margin-top: 6px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 1199.98px) {
+      .row {
+        .choose__content {
+          margin-left: 20px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 991.98px) {
+      .container {
+        .row {
+          .col-12:first-child {
+            display: flex;
+            align-items: center;
+
+            .choose__img {
+              margin-left: auto;
+              margin-right: auto;
+
+              img {
+                width: 300px;
+              }
+            }
+          }
+          .choose__content {
+            margin-top: 20px;
+
+            & > .textbox {
+              text-align: center;
+
+              .desc {
+                margin-top: 10px;
+              }
+            }
+
+            .choose__content-reason {
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 767.98px) {
+      .choose__img {
+        display: none;
       }
     }
   }
