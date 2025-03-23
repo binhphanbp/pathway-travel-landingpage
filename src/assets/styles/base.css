@@ -237,6 +237,10 @@ section.--pb {
 
   color: var(--white-cl);
   background-color: var(--primary-cl);
+
+  &.btn-large {
+    height: var(--height-button-large);
+  }
 }
 
 .btn-primary {

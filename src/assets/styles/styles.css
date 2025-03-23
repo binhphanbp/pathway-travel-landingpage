@@ -60,7 +60,7 @@
           font-family: var(--font-body-medium);
           color: var(--gray-light-cl);
           text-transform: capitalize;
-          transition: all var(--duration) ease-in-out;
+          transition: var(--duration);
           text-wrap: nowrap;
 
           --padding-lr: 16px;
@@ -78,7 +78,7 @@
             left: 50%;
             transform: translateX(-50%);
 
-            transition: all var(--duration) ease-in-out;
+            transition: var(--duration);
           }
 
           &.--active,
@@ -111,7 +111,7 @@
           background-color: var(--black-cl);
           display: block;
           position: absolute;
-          transition: all var(--duration) ease-in-out;
+          transition: var(--duration);
         }
         span {
           content: '';
@@ -120,7 +120,7 @@
           background-color: var(--black-cl);
           display: block;
           position: absolute;
-          transition: all var(--duration) ease-in-out;
+          transition: var(--duration);
         }
         &::after {
           content: '';
@@ -129,7 +129,7 @@
           background-color: var(--black-cl);
           display: block;
           position: absolute;
-          transition: all var(--duration) ease-in-out;
+          transition: var(--duration);
         }
         &::before {
           transform: rotate(0deg) translate(0px, 0px);
@@ -137,7 +137,7 @@
         span {
           top: 50%;
           transform: translateY(-50%);
-          transition: all var(--duration) ease-in-out;
+          transition: var(--duration);
         }
         &::after {
           bottom: 0;
@@ -147,14 +147,14 @@
         &.--active {
           &::before {
             transform: rotate(45deg) translate(9px, 4px);
-            transition: all var(--duration) ease-in-out;
+            transition: var(--duration);
           }
           span {
             opacity: 0;
           }
           &::after {
             transform: rotate(-45deg) translate(9px, -4px);
-            transition: all var(--duration) ease-in-out;
+            transition: var(--duration);
           }
         }
       }
@@ -215,9 +215,69 @@
   /* Section Hero */
   .hero {
     height: 100vh;
+    overflow: hidden;
 
-    /* .textbox {
-    } */
+    max-height: 870px;
+    min-height: 560px;
+
+    .container {
+      height: 100%;
+
+      .row {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        .textbox {
+          margin-top: -100px;
+
+          .desc {
+            font-size: 1.6rem;
+            margin-top: 20px;
+          }
+
+          .btn-group {
+            margin-top: 52px;
+            .btn:nth-child(2) {
+              margin-left: 28px;
+              background-color: var(--secondary-cl);
+
+              &:hover {
+                background-color: var(--primary-cl);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        .row {
+          .textbox {
+            margin-top: 0;
+            text-align: center;
+
+            .desc {
+              margin-top: 10px;
+            }
+
+            .btn-group {
+              margin-top: 20px;
+
+              .btn {
+                height: var(--height-button);
+                padding: 20px;
+
+                &:nth-child(2) {
+                  margin-left: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   /* ----------------- FOOTER ----------------- */
