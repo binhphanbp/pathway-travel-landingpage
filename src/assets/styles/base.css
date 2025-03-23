@@ -90,7 +90,7 @@ html {
 :root {
   --primary-cl: #ff7b29;
   --secondary-cl: #31c3e0;
-  --tertiary-cl: #132742;
+  --tertiary-cl: #1f1d63;
 
   --white-page-cl: #f6f6f6;
   --white-cl: #ffffff;
@@ -223,6 +223,7 @@ section.--pb {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: nowrap;
   height: var(--height-button);
   padding: 0 32px;
   border-radius: 12px;
@@ -264,7 +265,7 @@ section.--pb {
 
 .thumb {
   width: 100%;
-  aspect-ratio: 282/411;
+  aspect-ratio: 364/322;
   overflow: hidden;
   display: block;
   overflow: hidden;

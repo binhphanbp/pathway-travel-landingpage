@@ -3,7 +3,7 @@
 .container,
 .container-fluid {
   --column-size: 12;
-  --spacer: 10px;
+  --spacer: 20px;
 
   width: 100%;
   margin-left: auto;
@@ -161,7 +161,7 @@
   .container {
     max-width: 540px;
 
-    --spacer: 24px;
+    --spacer: 28px;
   }
 
   .g-sm-0 {

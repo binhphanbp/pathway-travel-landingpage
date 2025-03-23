@@ -284,6 +284,109 @@
     }
   }
 
+  /* Section Best Tour */
+  .besttour {
+    .besttour__info {
+      .textbox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .textbox-right {
+          max-width: 508px;
+        }
+      }
+    }
+
+    .row {
+      margin-top: 40px;
+
+      .besttour__list-item {
+        overflow: hidden;
+        background-color: var(--white-cl);
+        box-shadow: -2px 0px 9px 0px rgba(176, 176, 176, 0.75);
+        border-radius: 12px;
+
+        .thumb {
+          img {
+            transition: var(--duration);
+          }
+        }
+
+        .textbox {
+          padding: 20px 28px;
+
+          .heading {
+            color: var(--primary-cl);
+          }
+
+          .desc {
+            margin-top: 0px;
+            font-family: var(--font-body-semibold);
+            font-size: 2rem;
+            color: var(--tertiary-cl);
+
+            transition: var(--duration);
+          }
+
+          .location {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gray-light-cl);
+
+            margin-top: 20px;
+          }
+        }
+
+        &:hover {
+          .thumb {
+            img {
+              transform: scale(1.2);
+            }
+          }
+          .textbox {
+            .desc {
+              color: var(--secondary-cl);
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 991.98px) {
+      .besttour__info {
+        .textbox {
+          .textbox-right {
+            max-width: 380px;
+          }
+        }
+      }
+
+      .row {
+        margin-top: 20px;
+
+        .col {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 767.98px) {
+      .besttour__info {
+        .textbox {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 20px;
+
+          .desc {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+
   /* Section Choose Us */
   .choose {
     .container {
@@ -370,11 +473,11 @@
       }
     }
 
-    @media screen and (max-width: 767.98px) {
+    /* @media screen and (max-width: 767.98px) {
       .choose__img {
         display: none;
       }
-    }
+    } */
   }
 
   /* ----------------- FOOTER ----------------- */
