@@ -487,5 +487,38 @@
     } */
   }
 
+  /* Section Tour Type */
+  .tourtype {
+    .tourtype__list {
+      margin-top: 60px;
+
+      .tourtype__list-item {
+        padding: 44px 50px;
+
+        background-color: var(--white-cl);
+        border: 2px solid #ececec;
+        border-radius: 12px;
+        text-align: center;
+        img {
+          margin: 0 auto;
+        }
+
+        .icon {
+          margin-bottom: 20px;
+        }
+
+        .textbox {
+          .desc {
+            margin-top: 8px;
+            span {
+              font-family: var(--font-body-medium);
+              color: var(--primary-cl);
+            }
+          }
+        }
+      }
+    }
+  }
+
   /* ----------------- FOOTER ----------------- */
 }
