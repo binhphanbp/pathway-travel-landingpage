@@ -17,12 +17,23 @@ Pathway Travel là một trang web du lịch giúp người dùng dễ dàng tì
 
 ## 📂 Cấu trúc thư mục
 ```
-Pathway-Travel/
-│── index.html        # Trang chính
-│── style.css         # File CSS chính
-│── script.js         # JavaScript xử lý tương tác
-│── assets/           # Hình ảnh, icon, fonts
-└── README.md         # Tài liệu dự án
+│── .gitignore            # Tệp gitignore để loại trừ các tệp/thư mục không cần thiết
+│── index.html            # Tệp HTML chính của dự án
+│── README.md             # Tài liệu mô tả dự án
+│
+├── public/               # Thư mục chứa các tài nguyên công khai
+│   ├── icons/            # Biểu tượng
+│   └── images/           # Hình ảnh
+│
+├── src/                  # Thư mục chứa mã nguồn chính
+│   ├── assets/           # Tài nguyên nội bộ như fonts
+│   │   └── fonts/        # Phông chữ
+│   ├── scripts/          # Mã JavaScript
+│   │   └── main.js       # File JavaScript chính
+│   └── styles/           # CSS và thiết lập giao diện
+│       ├── base.css      # Các quy tắc CSS cơ bản
+│       ├── grid.css      # CSS cho bố cục lưới
+│       └── styles.css    # CSS chung của dự án
 ```
 
 ## 📖 Cách chạy dự án
