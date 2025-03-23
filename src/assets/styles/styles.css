@@ -521,6 +521,26 @@
         }
       }
     }
+
+    @media screen and (max-width: 991.98px) {
+      .tourtype__list {
+        margin-top: 20px;
+
+        .row {
+          .col {
+            margin-top: 28px;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 575.98px) {
+      .row {
+        .col {
+          margin-top: 10px;
+        }
+      }
+    }
   }
 
   /* Section Gallery */
