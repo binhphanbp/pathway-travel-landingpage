@@ -1,10 +1,13 @@
 .mainpage {
+  /* .container {
+    padding: 0;
+  } */
   position: relative;
 
   /* PROGRESSBAR */
   .progressbar {
     width: 0%;
-    height: 4px;
+    height: var(--height-progress-bar);
     position: fixed;
     left: 0;
     top: 0;
@@ -27,6 +30,19 @@
       height: 100%;
 
       position: relative;
+    }
+
+    .header__logo {
+      display: flex;
+      align-items: center;
+
+      .header__logo-type,
+      .header__logo-mark {
+        padding-top: 5px;
+      }
+      .header__logo-mark {
+        display: none;
+      }
     }
 
     .header__menu {
@@ -144,9 +160,65 @@
       }
     }
 
-    /* ----------------- MAIN ----------------- */
-    /* Section */
+    /* Responsive Header */
+    @media screen and (max-width: 991.98px) {
+      .container {
+        .header__logo {
+          .header__logo-type {
+            display: none;
+          }
+          .header__logo-mark {
+            display: block;
+          }
+        }
 
-    /* ----------------- FOOTER ----------------- */
+        .header__menu {
+          li {
+            a {
+              --padding-lr: 8px;
+              font-size: var(--fs-body-small);
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 767.98px) {
+      .container {
+        .header__menu {
+          display: none;
+        }
+
+        .header__logo {
+          .header__logo-type {
+            display: block;
+          }
+          .header__logo-mark {
+            display: none;
+          }
+        }
+
+        .header__cta {
+          .btn.btn-secondary {
+            display: none;
+          }
+
+          .header__cta-hamburger {
+            display: block;
+          }
+        }
+      }
+    }
   }
+
+  /* ----------------- MAIN ----------------- */
+  /* Section Hero */
+  .hero {
+    height: 100vh;
+
+    /* .textbox {
+    } */
+  }
+
+  /* ----------------- FOOTER ----------------- */
 }

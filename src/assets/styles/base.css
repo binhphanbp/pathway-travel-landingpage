@@ -106,35 +106,35 @@ html {
   --font-body-bold: ppb;
 
   /* Font-size, Line-height, Letter-spacing Variables: */
-  --fs-h1: 6.2rem;
-  --lh-h1: 7rem;
+  --fs-h1: clamp(4.8rem, 2.245vw + 3.506rem, 6.2rem);
+  --lh-h1: 1.13;
   --ls-h1: 0.05px;
 
-  --fs-h2: 4rem;
-  --lh-h2: 5rem;
+  --fs-h2: clamp(3.2rem, 1.282vw + 2.461rem, 4rem);
+  --lh-h2: 1.25;
   --ls-h2: 0.05px;
 
-  --fs-h3: 2.4rem;
-  --lh-h3: 3.2rem;
+  --fs-h3: clamp(2rem, 0.641vw + 1.631rem, 2.4rem);
+  --lh-h3: 1.333;
   --ls-h3: 0.05px;
 
   --fs-text-button: 1.8rem;
-  --lh-text-button: 1.8rem;
+  --lh-text-button: 1;
   --ls-text-button: 0.18px;
 
   --fs-body: 1.6rem;
-  --lh-body: 2.6rem;
+  --lh-body: 1.625;
   --ls-body: 0.05px;
 
   --fs-body-small: 1.4rem;
-  --lh-body-small: 2rem;
+  --lh-body-small: 1.42;
   --ls-body-small: 0.05px;
 
   --duration: 0.4s;
 
   --height-header: 80px;
   --height-footer: 400px;
-  --height-progress-bar: 5px;
+  --height-progress-bar: 4px;
   --height-button: 48px;
   --height-button-large: 66px;
   --pd-section: 60px;
@@ -204,7 +204,7 @@ body {
 
 .main {
   position: relative;
-  /* margin-top: var(--height-header); */
+  margin-top: calc(var(--height-header) + var(--height-progress-bar));
 }
 
 section.--ptb {
@@ -247,8 +247,12 @@ section.--pb {
 }
 
 .btn-secondary {
+  font-family: var(--font-body-medium);
+  font-size: 1.4rem;
+
   background-color: var(--secondary-cl);
   border-radius: 8px;
+  padding: 0 16px;
 }
 .btn-secondary:hover {
   background-color: var(--primary-cl);
