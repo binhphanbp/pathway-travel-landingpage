@@ -45,6 +45,7 @@ Pathway Travel là một trang web du lịch giúp người dùng dễ dàng tì
 
 ## 📞 Liên hệ
 Nếu có bất kỳ góp ý hoặc thắc mắc nào, vui lòng liên hệ qua email: `phanbinh150504.com`.
+Số điện thoại: 0382832609
 
 ---
 **© 2025 Pathway Travel. All Rights Reserved.**
