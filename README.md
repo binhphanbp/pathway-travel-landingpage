@@ -17,7 +17,7 @@ Pathway Travel là một trang web du lịch giúp người dùng dễ dàng tì
 
 ## 📂 Cấu trúc thư mục
 ```
-│── .gitignore            # Tệp gitignore để loại trừ các tệp/thư mục không cần thiết
+
 │── index.html            # Tệp HTML chính của dự án
 │── README.md             # Tài liệu mô tả dự án
 │
