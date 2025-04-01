@@ -48,4 +48,4 @@ Nếu có bất kỳ góp ý hoặc thắc mắc nào, vui lòng liên hệ qua 
 Số điện thoại: 0382832609
 
 ---
-**© 2025 Pathway Travel. All Rights Reserved.**
+
